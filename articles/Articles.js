@@ -22,9 +22,10 @@ const Article = connection.define("articles", {
 // Slug definira uma rota amigável "desenvolvimento-web"
 
 // Relações de chave primária e estrangeira das tabelas do BD
-// Category.hasMany(Article);
-// Article.belongsTo(Category);
+Category.hasMany(Article);
+Article.belongsTo(Category);
 
-// Article.sync({force: true});
+Article.sync({force: true});
+// Category.sync({force:true});
 
 module.exports = Article;
